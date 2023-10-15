@@ -2,7 +2,7 @@ import json
 import pytest
 
 
-from pydantic_osw_datamodel.model import Model
+from oswdatamodel.model import Model
 
 
 @pytest.mark.usefixtures("model", "modelpath")

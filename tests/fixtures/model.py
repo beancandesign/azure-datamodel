@@ -1,8 +1,8 @@
 import math
 import pytest
 
-from pydantic_osw_datamodel import Model, Foundation, Blade, Nacelle, Rotor, Hub, Tower
-from pydantic_osw_datamodel.fea.elements import (
+from oswdatamodel import Model, Foundation, Blade, Nacelle, Rotor, Hub, Tower
+from oswdatamodel.fea.elements import (
     Tube,
     Cuboid,
     Cone,
@@ -10,8 +10,8 @@ from pydantic_osw_datamodel.fea.elements import (
     ConicalTube,
     Element,
 )
-from pydantic_osw_datamodel.fea.nodes import Node
-from pydantic_osw_datamodel.geometry.vectors import Vector3
+from oswdatamodel.fea.nodes import Node
+from oswdatamodel.geometry.vectors import Vector3
 
 BLADE_URL = "assets/models/blade.glb"
 
