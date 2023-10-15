@@ -1,11 +1,13 @@
 name: Tests
 
 on: 
-  workflow_run:
-    # Only run once testing is complete (success checked later)
-    workflows: [Test]
-    types: [completed]
-    branches: [main]
+  push:
+    branches:
+        - 'main'
+  pull_request:
+    branches:
+        - 'main'
+    types: [opened, ready_for_review]
 
 jobs:
   test:
