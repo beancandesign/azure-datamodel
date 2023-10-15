@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "azure_datamodel"
+name = "pydantic-osw-model"
 version = "0.1.0"
-description = "Example datamodel to use in the Azure-* repos"
+description = "Offshore wind turbine structure datamodel written in pydantic."
 authors = ["Ben Cannell"]
 license = "GPL-3.0"
 readme = "README.md"
