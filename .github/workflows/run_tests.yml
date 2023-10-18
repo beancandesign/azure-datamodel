@@ -1,4 +1,4 @@
-name: test_runner
+name: TestRunner
 
 on: workflow_call
 
