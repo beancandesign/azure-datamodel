@@ -6,4 +6,8 @@ on:
         - 'main'
 
 jobs:
-  uses: ./.github/workflows/run_tests.yml
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run test workflow
+        uses: ./.github/workflows/run_tests.yml
