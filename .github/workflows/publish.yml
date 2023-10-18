@@ -1,6 +1,9 @@
 name: Publish
 
 on:
+  push:
+    tags:
+      - '*'
   workflow_run:
     # Only run once testing is complete (success checked later)
     workflows: [Test]
