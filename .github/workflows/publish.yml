@@ -4,15 +4,9 @@ on:
   release:
     types: [published]
 
-  workflow_run:
-    # Only run once testing is complete (success checked later)
-    workflows: [Test]
-    types: [completed]
-
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -28,9 +22,3 @@ jobs:
         with:
           repository-url: ${{ secrets.PYPI_PROJECT }}
           password: ${{ secrets.PYPI_TOKEN }}
-
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'Did not publish due to failed tests'

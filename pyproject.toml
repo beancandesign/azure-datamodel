@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "oswdatamodel"
-version = "0.0.3"
+version = "0.0.4"
 description = "Offshore wind turbine structure datamodel written in pydantic."
 authors = ["Ben Cannell"]
 license = "GPL-3.0"
