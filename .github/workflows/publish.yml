@@ -1,7 +1,6 @@
 name: Publish
 
 on:
-  # Ideally this would be based on the test workflow running
   workflow_run:
     # Only run once testing is complete (success checked later)
     workflows: [Test]
