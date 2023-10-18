@@ -24,8 +24,8 @@ jobs:
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          url: ${{ secrets.PYPI_PROJECT }}
-          id-token: ${{ secrets.PYPI_TOKEN }}
+          repository-url: ${{ secrets.PYPI_PROJECT }}
+          password: ${{ secrets.PYPI_TOKEN }}
 
   on-failure:
     runs-on: ubuntu-latest
