@@ -1,8 +1,7 @@
-import json
 import pytest
 
 
-from azure_datamodel.model import Model
+from oswdatamodel.model import Model
 
 
 @pytest.mark.usefixtures("model", "modelpath")
