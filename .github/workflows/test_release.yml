@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run test workflow
-        uses: ./.github/workflows/run_tests.yml
+        uses: beancandesign/oswdatamodel/.github/workflows/run_tests.yml
