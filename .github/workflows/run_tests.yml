@@ -1,21 +1,20 @@
 name: test_runner
 
-on:
-  # A callable github action
-  workflow_call:
+on: workflow_call
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10' 
-    - name: Install poetry
-      uses: snok/install-poetry@v1
-    - name: Install python environment
-      run: |
-        poetry install
-    - name: Test with pytest
-      run: |
-        poetry run pytest
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - name: Install poetry
+        uses: snok/install-poetry@v1
+      - name: Install python environment
+        run: |
+          poetry install
+      - name: Test with pytest
+        run: |
+          poetry run pytest
