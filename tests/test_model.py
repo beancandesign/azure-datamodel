@@ -16,4 +16,4 @@ class TestSerializeModel:
         with open(modelpath, "r") as f:
             lines = f.read()
             loaded = Model.model_validate_json(lines)
-        assert model
+        assert model == loaded
